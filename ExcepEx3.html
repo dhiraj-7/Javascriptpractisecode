@@ -1,0 +1,23 @@
+<!-- example on finally block -->
+<!DOCTYPE html>
+<html>
+  <head>
+	<title> Exceptions</title>
+ </head>
+ <body>
+   <script>
+		try{
+		   var x=prompt("Enter number to evaluable");
+		   document.write("X Val "+ eval(x), "<br>" );
+		}
+		catch(e){
+			document.write("Numbers Only :" + e.description, "<br>"); 
+		}
+		finally{
+   		   document.write("Msg From Finally Block<br>");									
+		}
+	</script>
+    <h1>Hello</h1> 
+ </body>
+</html>   
+					

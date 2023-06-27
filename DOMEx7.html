@@ -1,0 +1,47 @@
+<!-- example on document object -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>DOM Demo</title>
+  <style>
+    .aaa{
+      color:blue;
+      background-color:yellow;
+	}
+    #bbb{
+      color:yellow;
+      background-color:blue;
+	}
+  </style>
+ </head>
+ <body>
+    <p id="p1">Object finding methods</p>
+    <input type="text" name="t1"> <br>
+
+    <h1 id="bbb"> green apples </h1>
+
+    <label>Username</label> <br>
+	<label>Password</label> <br>
+
+    <h3 class="aaa">Apples</h3>
+    <h4 class="aaa">Mangos</h4>
+	<hr>
+
+    <script>
+      let ob1=document.getElementById("p1") //returns obj of P
+      document.write("ob1 => "+ ob1 +"<br>");
+
+      let ob2=document.getElementsByName("t1"); 
+      document.write("ob2 => "+ ob2 +"<br>");
+
+	  let ob3=document.getElementsByTagName("label");
+      document.write("ob3 => "+ ob3 +"<br>");
+
+	  let ob4=document.getElementsByClassName("aaa");
+      document.write("ob4 => "+ ob4 +"<br>");
+
+	  let ob5=document.querySelector("#bbb") 
+      document.write("ob5 => " + ob5 +"<br>");
+    </script>
+ </body>
+</html>

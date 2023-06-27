@@ -1,0 +1,47 @@
+<!-- example on event handling -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Events Demo</title>
+  <script>
+      var data=["Siva Kumar Y", "Civil Engineer", "C Faculty", "Oracle Faculty", "Java Faculty", "Web Tech", "Naresh i Tech"];
+      var i=0;
+ 	  function myfun()	 
+      {
+		if(i>6){							 
+            i=0;	 
+		}
+        document.getElementById("head1").innerHTML = data[i];  
+	    i++; 
+      }
+  </script>
+ </head>
+ <body>
+    <h2>Demo on multiple events</h2>
+    <h1 id="head1" style="background:#ffff00; text-align:center;"> Welcome  </h1>
+   
+    <div id="div1" style="background:green;height:100px;">
+      <h1>Demo on mouse over/out events</h1>
+	</div>
+
+    <script>
+    /* let ob=document.getElementById("head1");
+       ob.addEventListener("dblclick", fun1);  OR */
+
+      document.getElementById("head1").addEventListener("dblclick", myfun);		
+
+      document.getElementById("div1").addEventListener("mouseover",  () => {			//mouse enter
+																				document.getElementById("div1").style.backgroundColor="blue";    
+																				console.log("mouseover"); 
+																		    } 
+																		);
+
+      document.getElementById("div1").addEventListener("mouseout",  function() {
+																				console.log("mouseout");
+																			    document.getElementById("div1").style.backgroundColor="green";	
+																			}
+																		);
+   </script>
+ </body>
+</html>			 
+		

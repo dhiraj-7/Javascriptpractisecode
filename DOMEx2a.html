@@ -1,0 +1,28 @@
+<!-- example on DOM objects -->
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+	 window.setInterval("fun1()", 2000);
+     function fun1()			
+	 {
+		let c = parseInt( Math.random()*1000000 );
+	    document.getElementById("d").style.backgroundColor=`#${c}`;
+	    console.log(c);
+     }
+
+	  window.setInterval("fun2()", 1000);
+	  function fun2() 
+      {
+		let d=new Date();
+		let st =`${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()}`;
+		res.value = st;
+      }
+	</script>
+</head>
+<body>
+   <output id="res" style="color:red; font-size:30px;"> </output>
+
+  
+</body>
+</html>
